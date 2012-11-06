@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CPRT Access</title>
+    <link href="css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap-responsive.min.css" media="all" rel="stylesheet" type="text/css"/>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/underscore-1.1.6.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.0.18.min.js"></script>
+    <script src="js/cprt.js"></script>
+
+    <style type="text/css">
+
+      body
+      {
+        margin:20px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Todo App Interface -->
+    <div class="container">
+      
+        <div id="todoapp">
+          
+          <div class="title">
+            <h1>CPRT Access</h1>
+            <p class="intro"> Classroom Pivotal Response Teaching – Helping teachers bridge the gap between research and practice. </p>
+
+          </div>
+
+          <div class="content"></div>
+
+        </div>
+      
+    </div>
+
+
+    <!-- Templates -->
+
+    <script type="text/template" id="login-template">
+
+    <div class="row-fluid">
+      <div class="span6">
+
+        <ul class="nav btn-group">
+          <li class="btn btn-small"><a href="#home" data-toggle="tab">Home</a></li>
+          <li class="btn btn-small"><a href="#profile" data-toggle="tab">What we do</a></li>
+          <li class="btn btn-small"><a href="#messages" data-toggle="tab">Who we are</a></li>
+          <li class="btn btn-small"><a href="#settings" data-toggle="tab">Resources</a></li>
+          <li class="btn btn-small"><a href="#faq" data-toggle="tab">FAQ</a></li>
+        </ul>    
+
+        <br>
+
+        <div class="tab-content">
+          <div class="tab-pane active " id="home">
+
+          <p>Pivotal Response Training (PRT) is an evidence-based practice designed to improve learning in children with Autism Spectrum Disorders in the areas of communication, social interaction, self-initiations, play skills, and academic skills in one-on-one settings. However, psychologists, teachers, and school administrators believe children with autism are best served by a collaborative community approach, so we have come together to develop a program for use during day-to-day classroom activities. This new method is known as Classroom Pivotal Response Training (CPRT) and it highlights changes that make the program more suited to group classroom environments.</p>
+
+          <p>CPRT is a naturalistic, behavioral approach to teaching students with Autism that is soundly supported in the scientific literature. Managing the classroom and the highly varied needs of students with autism can be a challenge and teachers we have worked with have found CPRT to be fun and easy to implement with their students. Using CPRT is also not likely to require a dramatic change in the way teachers are interacting with their students; instead, it provides a way to label and enhance teaching methods to maximize student achievement, easily identify strengths and weaknesses, and train others to use the same approach. CPRT can work in your classroom because it was designed specifically with the benefits and challenges of the classroom in mind.</p>
+                        
+          <p>Our hope is that CPRT meets these criteria for you.</p>
+          </div>
+          
+          <div class="tab-pane" id="profile">Put text here for What we do</div>
+          <div class="tab-pane" id="messages">Put text here for Who we are</div>
+          <div class="tab-pane" id="settings">Put text here for Resources</div>
+          <div class="tab-pane" id="faq">Put text here for FAQ</div>
+        </div>
+
+      </div>
+
+
+
+    <div class="span6">
+
+      <header id="header"></header>
+  
+        <div class="login well">
+
+          <form class="signup-form form">
+            <fieldset>
+            <legend>Sign up here</legend>
+            
+            <div class="error alert  alert-error" style="display:none"></div>
+
+            <div class="control-group">
+              <label class="control-label" for="signup-username">Username</label>
+              <div class="controls">
+                <input type="text" id="signup-username" />
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="signup-email">Email address</label>
+              <div class="controls">
+                <input type="text" id="signup-email" placeholder="" />
+              </div>  
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="signup-password">Password</label>
+              <div class="controls">
+                <input type="password" id="signup-password" placeholder="Create a Password" />
+              </div>  
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="signup-coursecode">Course Code</label>
+              <div class="controls">
+                <input type="text" id="signup-coursecode" placeholder="Add your course code" />
+              </div>  
+            </div>
+
+            <button class="btn btn-success">Sign Up</button>
+            </fieldset>
+          </form>
+
+          <form class="login-form form">
+          <fieldset>
+              <legend>or Log in</legend>
+            
+            <div class="error alert  alert-error" style="display:none"></div>
+            <div class="control-group">
+
+              <label class="control-label" for="login-username">Username</label>
+              <div class="controls">
+                <input type="text" id="login-username" />
+              </div>
+            </div>
+
+            <div class="control-group">          
+              <label class="control-label" for="login-password">Password</label>
+              <div class="controls">
+                <input type="password" id="login-password" />
+              </div>
+            </div>
+
+            <button class="btn btn-success">Log In</button>
+          </fieldset>
+          </form>
+
+         </div>    
+      </div>
+    </div>
+
+
+
+    </script>
+
+    <script type="text/template" id="manage-todos-template">
+        <% if(Parse.User.current().get("userType") == 'cprt2013'){ %>
+          <div>
+
+            <h3>Welcome to the CPRT Study <%= Parse.User.current().get("username") %>!</h3>                    
+            <p>Thanks again for participating in our Classroom Pivotal Response Teaching Study! </p>
+            <p>You have been assigned to the Class of 2013. We are very excited to have you be a part of this class! You will receive training during the 2012-2013 school year, and will participate in some additional assessments and classroom observations in ___clasroom obs. </p>
+
+            <p>Please take some time to familiarize yourself with our website. Our goal is to make this experience as fun and hassle free as possible!</p>
+            <p>Please don’t hesitate to call or E-mail if you have any questions at rherman@casrc.org or 858-966-7704 ext 3842.  Thanks!!
+            </p>
+
+            <h4>If you would like any training materials, just click on "Handouts" to access the pdf files!</h4>
+
+
+              <div>
+                <ul>
+
+
+                <%
+                  today = new Date();                  
+                  dateLimit = new Date(2012,0,1);
+                  if ( today > dateLimit) { 
+                %>  
+                  <!-- place anything you want released at this release date here-->
+
+                  Course materials (<i>Available after <%= dateLimit %></i>)
+                  <li><a href="images/handouts/session_1/gathering_info.pdf">Hand out #1 - Gathering info</a></li>
+                  <li><a href="images/handouts/session_1/homework_handout_session_1.pdf">Hand out #2 - Homework Handout Session 1</a></li>
+
+                  <br>
+                <% } %>
+
+
+
+
+                <%
+                  today = new Date();                  
+                  dateLimit = new Date(2012,5,1);
+                  if ( today > dateLimit) { 
+                %>  
+                  <!-- place anything you want released at this release date here-->  
+                  Course materials (<i>Available after <%= dateLimit %></i>)
+
+                  <li><a href="images/handouts/session_1/gathering_info.pdf">Hand out #1 - Gathering info</a></li>
+                  
+                  <li><a href="images/handouts/session_1/homework_handout_session_1.pdf">Hand out #2 - Homework Handout Session 1</a></li>
+
+                    <br>
+                <% } %>
+
+
+
+
+                </ul>
+              </div>
+
+            <div>Also, don't forget to upload your weekly data! We really appreciate it!</div>   
+
+            
+
+            <form id="fileupload" name="fileupload" enctype="multipart/form-data" method="post">
+              <fieldset>
+                <input type="file" name="fileselect" id="fileselect"></input>
+                <input class="btn" id="uploadbutton" type="button" value="Upload to Parse"/>
+              </fieldset>
+            </form>
+
+            <div style="display:none;" id="uploadMessage"></div>
+
+            <h4>Remember, if you have any questions, comments, or suggestions, just post them on our forum and our trainers or other members of the study will answer them as promptly as possible!</h4> 
+          </div>
+
+
+
+
+        <% } %>
+
+      <div class="section">
+
+        <div id="main">
+          
+        <% if(Parse.User.current().get("userType") == 'cprtADMIN'){ %>
+
+          <h3><center><a href="files.html">Show all uploads</a></center></h3>
+
+        <% }%>
+
+        </div>
+
+        <div class="pull-right">
+          Signed in as <%= Parse.User.current().get("username") %> (<a href="#" class="log-out">Click to log out</a>)
+        </div>
+
+      </div>
+    </script>
+
+
+  </body>
+  <script type="text/javascript">
+    
+  </script>
+
+</html>
