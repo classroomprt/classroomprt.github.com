@@ -47,7 +47,6 @@
     <script type="text/template" id="login-template">
 
     <div class="row-fluid">
-      <div class="span7">
 
         <ul class="nav btn-group">
           <li class="btn btn-large"><a href="#home" data-toggle="tab">Home</a></li>
@@ -58,6 +57,7 @@
           <li class="btn btn-large"><a href="#contactus" data-toggle="tab">Contact Us</a></li>
         </ul>    
 
+      <div class="span7">
         <br>
 
         <div class="tab-content">
@@ -151,49 +151,11 @@
 
       <header id="header"></header>
   
-        <div class="login well">
-
-          <form class="signup-form form">
-            <fieldset>
-            <legend>Sign up here</legend>
-            
-            <div class="error alert  alert-error" style="display:none"></div>
-
-            <div class="control-group">
-              <label class="control-label" for="signup-username">Username</label>
-              <div class="controls">
-                <input type="text" id="signup-username" />
-              </div>
-            </div>
-
-            <div class="control-group">
-              <label class="control-label" for="signup-email">Email address</label>
-              <div class="controls">
-                <input type="text" id="signup-email" placeholder="" />
-              </div>  
-            </div>
-
-            <div class="control-group">
-              <label class="control-label" for="signup-password">Password</label>
-              <div class="controls">
-                <input type="password" id="signup-password" placeholder="Create a Password" />
-              </div>  
-            </div>
-
-            <div class="control-group">
-              <label class="control-label" for="signup-coursecode">Course Code</label>
-              <div class="controls">
-                <input type="text" id="signup-coursecode" placeholder="Add your course code" />
-              </div>  
-            </div>
-
-            <button class="btn btn-success">Sign Up</button>
-            </fieldset>
-          </form>
+        <div class="login">
 
           <form class="login-form form">
           <fieldset>
-              <legend>or Log in</legend>
+              <legend>Log in</legend>
             
             <div class="error alert  alert-error" style="display:none"></div>
             <div class="control-group">
@@ -219,99 +181,172 @@
       </div>
     </div>
 
-
-
     </script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script type="text/template" id="manage-todos-template">
-        <% if(Parse.User.current().get("userType") == 'cprt2013'){ %>
           <div>
+            <div class="page-header">
+              <h3>Welcome to the CPRT Study <%= Parse.User.current().get("fullName") %>!</h3>
+              <p>Thanks again for participating in our Classroom Pivotal Response Teaching Study! </p>
+            </div>
 
-            <h3>Welcome to the CPRT Study <%= Parse.User.current().get("username") %>!</h3>                    
-            <p>Thanks again for participating in our Classroom Pivotal Response Teaching Study! </p>
-            <p>You have been assigned to the Class of 2013. We are very excited to have you be a part of this class! You will receive training during the 2012-2013 school year, and will participate in some additional assessments and classroom observations in ___clasroom obs. </p>
-
-            <p>Please take some time to familiarize yourself with our website. Our goal is to make this experience as fun and hassle free as possible!</p>
-            <p>Please don’t hesitate to call or E-mail if you have any questions at rherman@casrc.org or 858-966-7704 ext 3842.  Thanks!!
-            </p>
-
-            <h4>If you would like any training materials, just click on "Handouts" to access the pdf files!</h4>
-
-
-              <div>
-                <ul>
-
-
-                <%
-                  today = new Date();                  
-                  dateLimit = new Date(2012,0,1);
-                  if ( today > dateLimit) { 
-                %>  
-                  <!-- place anything you want released at this release date here-->
-
-                  Course materials (<i>Available after <%= dateLimit %></i>)
-                  <li><a href="images/handouts/session_1/gathering_info.pdf">Hand out #1 - Gathering info</a></li>
-                  <li><a href="images/handouts/session_1/homework_handout_session_1.pdf">Hand out #2 - Homework Handout Session 1</a></li>
-
-                  <br>
-                <% } %>
-
-
-
-
-                <%
-                  today = new Date();                  
-                  dateLimit = new Date(2012,5,1);
-                  if ( today > dateLimit) { 
-                %>  
-                  <!-- place anything you want released at this release date here-->  
-                  Course materials (<i>Available after <%= dateLimit %></i>)
-
-                  <li><a href="images/handouts/session_1/gathering_info.pdf">Hand out #1 - Gathering info</a></li>
-                  
-                  <li><a href="images/handouts/session_1/homework_handout_session_1.pdf">Hand out #2 - Homework Handout Session 1</a></li>
-
-                    <br>
-                <% } %>
-
-
-
-
-                </ul>
+            <div class="row">
+              <div class="well span4 pull-right">
+                <center>
+                <h3>Account details</h3>
+                <p>Full name: <%= Parse.User.current().get("fullName") %><br>
+                Username: <%= Parse.User.current().get("username") %><br>
+                Location: <%= Parse.User.current().get("location") %></p>
+                
+                <a href="#" class="btn btn-inverse log-out">Click to log out</a>
+                </center>
               </div>
 
-            <div>Also, don't forget to upload your weekly data! We really appreciate it!</div>   
+              <!-- open row div tag -->
+    
 
-            
 
-            <form id="fileupload" name="fileupload" enctype="multipart/form-data" method="post">
-              <fieldset>
-                <input type="file" name="fileselect" id="fileselect"></input>
-                <input class="btn" id="uploadbutton" type="button" value="Upload to Parse"/>
-              </fieldset>
-            </form>
 
-            <div style="display:none;" id="uploadMessage"></div>
 
-            <h4>Remember, if you have any questions, comments, or suggestions, just post them on our forum and our trainers or other members of the study will answer them as promptly as possible!</h4> 
+
+
+<!-- THIS IS WHERE YOU DEFINE THE SCHEDULED RELEASE -->   
+
+<!-- SCHEDULE 0 -->  
+
+  <!-- 11/8/12  12/29/12  12/6/12 12/13/12 -->              
+
+        <% if(Parse.User.current().get("schedule") == 0){ %>
+
+              <div class="span7">
+                <p>You have been assigned to the Class of 2013. We are very excited to have you be a part of this class! You will receive training during the 2012-2013 school year, and will participate in some additional assessments and classroom observations in ___clasroom obs. </p>
+
+                <p>Please take some time to familiarize yourself with our website. Our goal is to make this experience as fun and hassle free as possible!</p>
+                <p>Please don’t hesitate to call or E-mail if you have any questions at rherman@casrc.org or 858-966-7704 ext 3842.  Thanks!!
+                </p>
+
+              </div>
+
+              
+            </div>        <!-- close row div tag -->
+      
+              <div class="page-header ">
+              <h3>Handouts</h3>
+              </div>
+
+
+  <!-- COPY AND PASTE FOR EACH SESSION: FROM HERE -->              
+
+              <div class="span12">
+                
+                <!-- first session -->
+
+                <!--set the date here to match the schedule date  - becareful as the month starts from 0 (e.g. 0 -> january)-->
+                <%
+                  today = new Date();    
+                  dateLimit = new Date(2012,10,8);
+                  if ( today > dateLimit) { 
+                %>  
+
+                  <h4>Session 1 Materials <small> Available after <%= dateLimit %></small></h4>
+                  <ol>
+                  <li><a href="images/handouts/session_1/gathering_info.pdf">Gathering Information</a></li>
+
+                  <li><a href="images/handouts/session_1/time-based_preference_assessment.pdf">Time Based Preference Assessment</a></li>
+
+                  <li><a href="images/handouts/session_1/paired_choice_preference_assessment.pdf">Paired Choice Preference Assessment</a></li>
+
+                  <li><a href="images/handouts/session_1/not_found.pdf">CPRT Training Plan Template</a></li>
+
+                  <li><a href="images/handouts/session_1/homework_handout_session_1.pdf">Homework Handout - Session 1</a></li>
+
+                  <li><a href="images/handouts/session_1/session_1_study_guide.pdf">Session 1 Study Guide</a></li>
+
+                  <li><a href="images/handouts/session_1/session_2_study_guide.pdf">Session 2 Study Guide</a></li>
+
+                  <li><a href="images/handouts/session_1/not_found.pdf">Slide Handouts - Session 1</a></li>
+                  <br>
+                  </ol>
+
+                <% } %>
+              </div>
           </div>
+        </div>
 
-
-
+  <!-- COPY AND PASTE FOR EACH SESSION: TO HERE -->              
 
         <% } %>
 
+<!-- END SCHEDULE 0 -->              
+
+
+
+
+<!-- SCHEDULE 1 -->              
+<!-- END SCHEDULE 1 -->              
+
+<!-- SCHEDULE 2 -->              
+<!-- END SCHEDULE 2 -->              
+
+<!-- SCHEDULE 3 -->              
+<!-- END SCHEDULE 3 -->              
+
+<!-- SCHEDULE 4 -->              
+<!-- END SCHEDULE 4 -->              
+
+<!-- SCHEDULE 5 -->              
+<!-- END SCHEDULE 5 -->          
+
+<!-- SCHEDULE 6 -->              
+<!-- END SCHEDULE 6 -->          
+
+<!-- SCHEDULE 7 -->              
+<!-- END SCHEDULE 7 -->          
+
+<!-- SCHEDULE 8 -->              
+<!-- END SCHEDULE 8 -->          
+
+<!-- SCHEDULE 9 -->              
+<!-- END SCHEDULE 9 -->          
+
+
+
+
+
+
       <div class="section">
-
-        <div id="main">
-          
-        <% if(Parse.User.current().get("userType") == 'cprtADMIN'){ %>
-
-          <h3><center><a href="files.html">Show all uploads</a></center></h3>
-
-        <% }%>
-
-        </div>
 
         <div class="pull-right">
           Signed in as <%= Parse.User.current().get("username") %> (<a href="#" class="log-out">Click to log out</a>)
@@ -322,8 +357,5 @@
 
 
   </body>
-  <script type="text/javascript">
-    
-  </script>
-
+  
 </html>
