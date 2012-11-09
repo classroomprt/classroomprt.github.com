@@ -219,7 +219,8 @@
           <div>
             <div class="page-header">
               <h3>Welcome to the CPRT Study <%= Parse.User.current().get("fullName") %>!</h3>
-              <p>Thanks again for participating in our Classroom Pivotal Response Teaching Study! </p>
+              <p></p>
+              <p>Thank you again for participating in our Classroom Pivotal Response Teaching Study! </p>
             </div>
 
             <div class="row">
@@ -251,10 +252,10 @@
         <% if(Parse.User.current().get("schedule") == 0){ %>
 
               <div class="span7">
-                <p>You have been assigned to the Class of 2013. We are very excited to have you be a part of this class! You will receive training during the 2012-2013 school year, and will participate in some additional assessments and classroom observations in ___clasroom obs. </p>
+                <p>You have been assigned to the Class of 2013. We are very excited to have you be a part of this class! You will receive training during the 2012-2013 school year, and will participate in some additional assessments and classroom observations in the following years. </p>
 
                 <p>Please take some time to familiarize yourself with our website. Our goal is to make this experience as fun and hassle free as possible!</p>
-                <p>Please don’t hesitate to call or E-mail if you have any questions at rherman@casrc.org or 858-966-7704 ext 3842.  Thanks!!
+                <p>Don’t hesitate to call or E-mail if you have any questions at rherman@casrc.org or 858-966-7704 ext 3842.  Thanks!!
                 </p>
 
               </div>
@@ -273,7 +274,7 @@
                 
                 <!-- first session -->
 
-                <!--set the date here to match the schedule date  - becareful as the month starts from 0 (e.g. 0 -> january)-->
+                <!--set the date here to match the schedule date  - be careful as the month starts from 0 (e.g. 0 -> january)-->
                 <%
                   today = new Date();    
                   dateLimit = new Date(2012,10,8);
