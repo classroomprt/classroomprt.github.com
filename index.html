@@ -229,7 +229,11 @@
                 <h3>Account details</h3>
                 <p>Full name: <%= Parse.User.current().get("fullName") %><br>
                 Username: <%= Parse.User.current().get("username") %><br>
-                Location: <%= Parse.User.current().get("location") %></p>
+                Location: <%= Parse.User.current().get("location") %><br>
+                Trainer: <%= Parse.User.current().get("trainer") %><br>
+                Class of <%= Parse.User.current().get("class") %><br>
+                </p>
+                
                 
                 <a href="#" class="btn btn-inverse log-out">Click to log out</a>
                 </center>
@@ -252,9 +256,9 @@
         <% if(Parse.User.current().get("schedule") == 0){ %>
 
               <div class="span7">
-                <p>Hi <%= Parse.User.current().get("fullName") %>, you are part of the Class of 2013. We are very excited to have you be a part of this class! You will receive training during the 2012-2013 school year, and will participate in some additional assessments and classroom observations in the following years. </p>
+                <p>Hi <%= Parse.User.current().get("fullName") %>, we are very excited to have you be a part of the CPRT class of <%= Parse.User.current().get("class") %>! You will receive training during the 2012-2013 school year, and will participate in some additional assessments and classroom observations in the following years. </p>
 
-                <p>On the website, you will have access to all training materials and handouts that you will have received from <%= Parse.User.current().get("trainer") %>!</p>
+                <p>On the website, you will have access to all training materials and handouts that you will have received from <%= Parse.User.current().get("trainer") %></p>
                 <p> If you have any questions about the training or any of the materials, don't hesitate to contact <%= Parse.User.current().get("trainer") %> at 858.966.7703 x <%= Parse.User.current().get("trainerX") %>   or  <%= Parse.User.current().get("trainerEmail") %>   !
                 <p>If you have any general questions about the study, please contact Renee Herman  at rherman@casrc.org or 858-966-7704 ext 3842.  </p> 
 
