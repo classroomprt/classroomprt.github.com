@@ -87,7 +87,7 @@
                 <p>However, all participating classrooms will not receive training in the same year. Some teachers will be trained during the 2012/2013 school year, but others will be trained during the 2013/2014 or 2014/2015 school year. </p>
                 
                 <h2> Who do I contact?</h2>
-                <p>If you are interested in participating, please contact Renee Herman at (858) 966-7703 extension 7148.</p>
+                <p>If you are interested in participating, please contact Renee Herman at (858) 966-7703 extension 3842.</p>
           </div>
           <div class="tab-pane" id="messages">
                 <h2> Aubyn Stahmer</h2>
@@ -139,7 +139,7 @@
           </div>
 
           <div class="tab-pane" id="contactus">
-                <p>If you have any questions, please feel free to contact us at rherman@casrc.org or 858.966.7703!</p>
+                <p>If you have any questions, please feel free to contact us at rherman@casrc.org or 858.966.7703 x3842!</p>
           </div>
         </div>
 
@@ -247,16 +247,16 @@
 
 <!-- SCHEDULE 0 -->  
 
-  <!-- 11/8/12  12/29/12  12/6/12 12/13/12 -->              
+  <!-- 11/8/12  11/29/12  12/6/12 12/13/12 -->              
 
         <% if(Parse.User.current().get("schedule") == 0){ %>
 
               <div class="span7">
-                <p>You have been assigned to the Class of 2013. We are very excited to have you be a part of this class! You will receive training during the 2012-2013 school year, and will participate in some additional assessments and classroom observations in the following years. </p>
+                <p>Hi <%= Parse.User.current().get("fullName") %>, you are part of the Class of 2013. We are very excited to have you be a part of this class! You will receive training during the 2012-2013 school year, and will participate in some additional assessments and classroom observations in the following years. </p>
 
-                <p>Please take some time to familiarize yourself with our website. Our goal is to make this experience as fun and hassle free as possible!</p>
-                <p>Don’t hesitate to call or E-mail if you have any questions at rherman@casrc.org or 858-966-7704 ext 3842.  Thanks!!
-                </p>
+                <p>On the website, you will have access to all training materials and handouts that you will have received from <%= Parse.User.current().get("trainer") %>!</p>
+                <p> If you have any questions about the training or any of the materials, don't hesitate to contact <%= Parse.User.current().get("trainer") %> at 858.966.7703 x <%= Parse.User.current().get("trainerX") %>   or  <%= Parse.User.current().get("trainerEmail") %>   !
+                <p>If you have any general questions about the study, please contact Renee Herman  at rherman@casrc.org or 858-966-7704 ext 3842.  </p> 
 
               </div>
 
