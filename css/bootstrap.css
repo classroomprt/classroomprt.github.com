@@ -139,6 +139,7 @@ body {
   line-height: 20px;
   color: #333333;
   background-color: #ffffff;
+  background-image: /images/basic_layout/background.png;
 }
 a {
   color: #0088cc;
