@@ -278,37 +278,81 @@
                 
                 <!-- first session -->
 
-                <!--set the date here to match the schedule date  - be careful as the month starts from 0 (e.g. 0 -> january)-->
-                <%
-                  today = new Date();    
-                  dateLimit = new Date(2012,10,8);
-                  if ( today > dateLimit) { 
-                %>  
+                        <!--set the date here to match the schedule date  - be careful as the month starts from 0 (e.g. 0 -> january)-->
+                        <%
+                          today = new Date();    
+                          dateLimit = new Date(2012,10,8);
+                          if ( today > dateLimit) { 
+                        %>  
+        
+                          <h4>Session 1 Materials <small> Available after <%= dateLimit %></small></h4>
+                          <ol>
+                          <li><a href="images/handouts/session_1/gathering_info.pdf">Gathering Information</a></li>
+                          <li><a href="images/handouts/session_1/time-based_preference_assessment.pdf">Time Based Preference Assessment</a></li>
+                          <li><a href="images/handouts/session_1/paired_choice_preference_assessment.pdf">Paired Choice Preference Assessment</a></li>
+                          <li><a href="images/handouts/session_1/not_found.pdf">CPRT Training Plan Template</a></li>
+                          <li><a href="images/handouts/session_1/homework_handout_session_1.pdf">Homework Handout - Session 1</a></li>
+                          <li><a href="images/handouts/session_1/session_1_study_guide.pdf">Session 1 Study Guide</a></li>
+                          <li><a href="images/handouts/session_1/session_2_study_guide.pdf">Session 2 Study Guide</a></li>
+                          <li><a href="images/handouts/session_1/not_found.pdf">Slide Handouts - Session 1</a></li>
+                          <br>
+                          </ol>
 
-                  <h4>Session 1 Materials <small> Available after <%= dateLimit %></small></h4>
-                  <ol>
-                  <li><a href="images/handouts/session_1/gathering_info.pdf">Gathering Information</a></li>
+                <!-- second session -->
 
-                  <li><a href="images/handouts/session_1/time-based_preference_assessment.pdf">Time Based Preference Assessment</a></li>
+                          <!--set the date here to match the schedule date  - be careful as the month starts from 0 (e.g. 0 -> january)-->
+                          <%
+                            today = new Date();    
+                            dateLimit = new Date(2012,10,29);
+                            if ( today > dateLimit) { 
+                          %>  
+          
+                            <h4>Session 2 Materials <small> Available after <%= dateLimit %></small></h4>
+                            <ol>
+                            
+                            <br>
+                            </ol>
 
-                  <li><a href="images/handouts/session_1/paired_choice_preference_assessment.pdf">Paired Choice Preference Assessment</a></li>
+                <!-- third session -->
+  
+                            <!--set the date here to match the schedule date  - be careful as the month starts from 0 (e.g. 0 -> january)-->
+                            <%
+                              today = new Date();    
+                              dateLimit = new Date(2012,11,06);
+                              if ( today > dateLimit) { 
+                            %>  
+            
+                              <h4>Session 3 Materials <small> Available after <%= dateLimit %></small></h4>
+                              <ol>
+                              
+                              <br>
+                              </ol>
 
-                  <li><a href="images/handouts/session_1/not_found.pdf">CPRT Training Plan Template</a></li>
-
-                  <li><a href="images/handouts/session_1/homework_handout_session_1.pdf">Homework Handout - Session 1</a></li>
-
-                  <li><a href="images/handouts/session_1/session_1_study_guide.pdf">Session 1 Study Guide</a></li>
-
-                  <li><a href="images/handouts/session_1/session_2_study_guide.pdf">Session 2 Study Guide</a></li>
-
-                  <li><a href="images/handouts/session_1/not_found.pdf">Slide Handouts - Session 1</a></li>
-                  <br>
-                  </ol>
+                <!-- fourth session -->
+  
+                            <!--set the date here to match the schedule date  - be careful as the month starts from 0 (e.g. 0 -> january)-->
+                            <%
+                              today = new Date();    
+                              dateLimit = new Date(2012,11,13);
+                              if ( today > dateLimit) { 
+                            %>  
+            
+                              <h4>Session 4 Materials <small> Available after <%= dateLimit %></small></h4>
+                              <ol>
+                              
+                              <br>
+                              </ol>
 
                 <% } %>
               </div>
           </div>
         </div>
+
+    
+
+
+
+    
 
   <!-- COPY AND PASTE FOR EACH SESSION: TO HERE -->              
 
