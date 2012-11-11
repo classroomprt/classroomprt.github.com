@@ -2052,6 +2052,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
 <!--ANSWER KEYS : THIS IS WHERE YOU DEFINE THE SCHEDULED RELEASE -->   
 
 <!-- SCHEDULE 0 -->  
@@ -2155,17 +2165,7 @@
 
         <% if(Parse.User.current().get("schedule") == 1){ %>
 
-              <div class="span7">
-                <p>Hi <%= Parse.User.current().get("fullName") %>, we are very excited to have you be a part of the CPRT class of <%= Parse.User.current().get("class") %>! You will receive training during the 2012-2013 school year, and will participate in some additional assessments and classroom observations in the following years. </p>
-
-                <p>On the website, you will have access to your schedule and all training materials and handouts that you will have received from your trainer, <%= Parse.User.current().get("trainer") %></p>
-                <p> If you have any questions about the training or any of the materials, don't hesitate to contact <%= Parse.User.current().get("trainer") %> at 858.966.7703 x <%= Parse.User.current().get("trainerX") %>   or  <%= Parse.User.current().get("trainerEmail") %>   !
-                <p>If you have any general questions about the study, please contact Renee Herman  at rherman@casrc.org or 858-966-7704 ext 3842.  </p> 
-
-              </div>
-
               
-            </div>        <!-- close row div tag -->
       
               <div class="page-header ">
               <h3>Handouts</h3>
@@ -2185,14 +2185,9 @@
                           if ( today > dateLimit) { 
                         %>  
         
-                          <h4>Session 1 Materials <small> Available after <%= dateLimit %></small></h4>
+                          <h4>Session 1 Answer Keys <small> Available after <%= dateLimit %></small></h4>
                           <ol>
-                          <li><a href="images/handouts/session_1/gathering_info.pdf">Gathering Information</a></li>
-                          <li><a href="images/handouts/session_1/time-based_preference_assessment.pdf">Time Based Preference Assessment</a></li>
-                          <li><a href="images/handouts/session_1/paired_choice_preference_assessment.pdf">Paired Choice Preference Assessment</a></li>
-                          <li><a href="images/handouts/session_1/homework_handout_session_1.pdf">Homework Handout - Session 1</a></li>
-                          <li><a href="images/handouts/session_1/session_1_study_guide.pdf">Session 1 Study Guide</a></li>
-                          <li><a href="images/handouts/session_1/session_2_study_guide.pdf">Session 2 Study Guide</a></li>
+                          <li><a href="images/keys/1_key.pdf">Session 1 Answer Key</a></li>
                           <br>
                           </ol>
 
@@ -2207,13 +2202,9 @@
                             if ( today > dateLimit) { 
                           %>  
           
-                            <h4>Session 2 Materials <small> Available after <%= dateLimit %></small></h4>
+                            <h4>Session 2 Answer Keys <small> Available after <%= dateLimit %></small></h4>
                             <ol>
-                            <li><a href="images/handouts/session_2/cprt_assessment.pdf">CPRT Assessment</a></li>
-                            <li><a href="images/handouts/session_2/data_record_unstructured.pdf">Data Record Unstructured</a></li>
-                            <li><a href="images/handouts/session_2/student_profile.pdf">Student Profile</a></li>
-                            <li><a href="images/handouts/session_2/homework_handout_session_2.pdf">Session 2 Homework Handout</a></li>
-                            <li><a href="images/handouts/session_2/session_3_study_guide.pdf">Session 3 Study Guide</a></li>
+                            <li><a href="images/keys/2_key.pdf">Session 2 Answer Key</a></li>
                             <br>
                             </ol>
 
@@ -2228,14 +2219,9 @@
                               if ( today > dateLimit) { 
                             %>  
             
-                              <h4>Session 3 Materials <small> Available after <%= dateLimit %></small></h4>
+                              <h4>Session 3 Answer Keys <small> Available after <%= dateLimit %></small></h4>
                               <ol>
-                              <li><a href="images/handouts/session_3/cprt_assessment.pdf">CPRT Assessment</a></li>
-                              <li><a href="images/handouts/session_3/planning_and_progress.pdf">Planning and Progress</a></li>
-                              <li><a href="images/handouts/session_3/cprt_data_record_semi-structured.pdf">Data Record Semi-Unstructured</a></li>
-                              <li><a href="images/handouts/session_3/data_record_unstructured.pdf">Data Record Unstructured</a></li>
-                              <li><a href="images/handouts/session_3/homework_handout_session_3.pdf">Session 3 Homework Handout</a></li>
-                              <li><a href="images/handouts/session_3/session_4_study_guide.pdf">Session 4 Study Guide</a></li>
+                              <li><a href="images/keys/3_key.pdf">Session 3 Answer Key</a></li>
                               <br>
                               </ol>
 
@@ -2250,12 +2236,9 @@
                               if ( today > dateLimit) { 
                             %>  
             
-                              <h4>Session 4 Materials <small> Available after <%= dateLimit %></small></h4>
+                              <h4>Session 4 Answer Keys <small> Available after <%= dateLimit %></small></h4>
                               <ol>
-                              <li><a href="images/handouts/session_4/group_data_record_rating.pdf">Group Data Record Rating</a></li>
-                              <li><a href="images/handouts/session_4/group_data_record_tally.pdf">Group Data Record Tally</a></li>
-                              <li><a href="images/handouts/session_4/homework_handout_session_4.pdf">Session 4 Homework Handout</a></li>
-                              <li><a href="images/handouts/session_4/session_5_study_guide.pdf">Session 5 Study Guide</a></li>
+                              <li><a href="images/keys/4_key.pdf">Session 4 Answer Key</a></li>
                               <br>
                               </ol>
 
@@ -2270,12 +2253,9 @@
                               if ( today > dateLimit) { 
                             %>  
             
-                              <h4>Session 5 Materials <small> Available after <%= dateLimit %></small></h4>
+                              <h4>Session 5 Answer Keys <small> Available after <%= dateLimit %></small></h4>
                               <ol>
-                              <li><a href="images/handouts/session_5/goal_summary.pdf">CPRT Goal Summary</a></li>
-                              <li><a href="images/handouts/session_5/writing_and_targeting_iep_goals_handout.pdf">Writing and Targeting IEP Goals</a></li>
-                              <li><a href="images/handouts/session_5/homework_handout_session_5.pdf">Session 5 Homework Handout</a></li>
-                              <li><a href="images/handouts/session_5/session_6_study_guide.pdf">Session 6 Study Guide</a></li>
+                              <li><a href="images/keys/5_key.pdf">Session 5 Answer Key</a></li>
                               <br>
                               </ol>
 
@@ -2290,17 +2270,9 @@
                               if ( today > dateLimit) { 
                             %>  
             
-                              <h4>Session 6 Materials <small> Available after <%= dateLimit %></small></h4>
+                              <h4>Session 6 Answer Keys <small> Available after <%= dateLimit %></small></h4>
                               <ol>
-                              <li><a href="images/handouts/session_6/cprt_training_decision_tree.pdf">CPRT Training Decision Tree</a></li>
-                              <li><a href="images/handouts/session_6/student_attention.pdf">Student Attention</a></li>
-                              <li><a href="images/handouts/session_6/e_cprt_in_the_classroom.pdf">CPRT in the Classroom</a></li>
-                              <li><a href="images/handouts/session_6/e_cprt_in_the_home.pdf">CPRT in the Home</a></li>
-                              <li><a href="images/handouts/session_6/e_cprt_update_from_classroom_to_home.pdf">CPRT Update From the Classroom</a></li>
-                              <li><a href="images/handouts/session_6/feedback.pdf">CPRT Feedback</a></li>
-                              <li><a href="images/handouts/session_6/s_cprt_en_la_clase.pdf">CPRT en la Clase (CPRT in the Class)</a></li>
-                              <li><a href="images/handouts/session_6/s_cprt_en_el_hogar.pdf">CPRT en el Hogar (CPRT in the Home)</a></li>
-                              <li><a href="images/handouts/session_6/s_cprt_actualizacin_de_la_clase_al_hogar.pdf">CPRT Actualizacin de la clase al hogar(CPRT Update From the Classroom)</a></li>
+                              <li><a href="images/keys/6_key.pdf">Session 6 Answer Key</a></li>
                               <br>
                               </ol>
 
@@ -2316,23 +2288,14 @@
 
 <!-- END SCHEDULE 1 -->              
 
+
 <!-- SCHEDULE 2 -->  
 
   <!-- 11/1/12     11/15/12     11/29/12     12/6/12     12/13/12     1/10/13 -->              
 
         <% if(Parse.User.current().get("schedule") == 2){ %>
 
-              <div class="span7">
-                <p>Hi <%= Parse.User.current().get("fullName") %>, we are very excited to have you be a part of the CPRT class of <%= Parse.User.current().get("class") %>! You will receive training during the 2012-2013 school year, and will participate in some additional assessments and classroom observations in the following years. </p>
-
-                <p>On the website, you will have access to your schedule and all training materials and handouts that you will have received from your trainer, <%= Parse.User.current().get("trainer") %></p>
-                <p> If you have any questions about the training or any of the materials, don't hesitate to contact <%= Parse.User.current().get("trainer") %> at 858.966.7703 x <%= Parse.User.current().get("trainerX") %>   or  <%= Parse.User.current().get("trainerEmail") %>   !
-                <p>If you have any general questions about the study, please contact Renee Herman  at rherman@casrc.org or 858-966-7704 ext 3842.  </p> 
-
-              </div>
-
-              
-            </div>        <!-- close row div tag -->
+             
       
               <div class="page-header ">
               <h3>Handouts</h3>
@@ -2352,14 +2315,9 @@
                           if ( today > dateLimit) { 
                         %>  
         
-                          <h4>Session 1 Materials <small> Available after <%= dateLimit %></small></h4>
+                          <h4>Answer Keys </h4>
                           <ol>
-                          <li><a href="images/handouts/session_1/gathering_info.pdf">Gathering Information</a></li>
-                          <li><a href="images/handouts/session_1/time-based_preference_assessment.pdf">Time Based Preference Assessment</a></li>
-                          <li><a href="images/handouts/session_1/paired_choice_preference_assessment.pdf">Paired Choice Preference Assessment</a></li>
-                          <li><a href="images/handouts/session_1/homework_handout_session_1.pdf">Homework Handout - Session 1</a></li>
-                          <li><a href="images/handouts/session_1/session_1_study_guide.pdf">Session 1 Study Guide</a></li>
-                          <li><a href="images/handouts/session_1/session_2_study_guide.pdf">Session 2 Study Guide</a></li>
+                          <li><a href="images/keys/1_key.pdf">Session 1 Answer Key</a></li>
                           <br>
                           </ol>
 
@@ -2374,13 +2332,9 @@
                             if ( today > dateLimit) { 
                           %>  
           
-                            <h4>Session 2 Materials <small> Available after <%= dateLimit %></small></h4>
+                            
                             <ol>
-                            <li><a href="images/handouts/session_2/cprt_assessment.pdf">CPRT Assessment</a></li>
-                            <li><a href="images/handouts/session_2/data_record_unstructured.pdf">Data Record Unstructured</a></li>
-                            <li><a href="images/handouts/session_2/student_profile.pdf">Student Profile</a></li>
-                            <li><a href="images/handouts/session_2/homework_handout_session_2.pdf">Session 2 Homework Handout</a></li>
-                            <li><a href="images/handouts/session_2/session_3_study_guide.pdf">Session 3 Study Guide</a></li>
+                            <li><a href="images/keys/2_key.pdf">Session 2 Answer Key</a></li>
                             <br>
                             </ol>
 
@@ -2395,14 +2349,9 @@
                               if ( today > dateLimit) { 
                             %>  
             
-                              <h4>Session 3 Materials <small> Available after <%= dateLimit %></small></h4>
+                             
                               <ol>
-                              <li><a href="images/handouts/session_3/cprt_assessment.pdf">CPRT Assessment</a></li>
-                              <li><a href="images/handouts/session_3/planning_and_progress.pdf">Planning and Progress</a></li>
-                              <li><a href="images/handouts/session_3/cprt_data_record_semi-structured.pdf">Data Record Semi-Unstructured</a></li>
-                              <li><a href="images/handouts/session_3/data_record_unstructured.pdf">Data Record Unstructured</a></li>
-                              <li><a href="images/handouts/session_3/homework_handout_session_3.pdf">Session 3 Homework Handout</a></li>
-                              <li><a href="images/handouts/session_3/session_4_study_guide.pdf">Session 4 Study Guide</a></li>
+                              <li><a href="images/keys/3_key.pdf">Session 3 Answer Key</a></li>
                               <br>
                               </ol>
 
@@ -2417,12 +2366,9 @@
                               if ( today > dateLimit) { 
                             %>  
             
-                              <h4>Session 4 Materials <small> Available after <%= dateLimit %></small></h4>
+                              
                               <ol>
-                              <li><a href="images/handouts/session_4/group_data_record_rating.pdf">Group Data Record Rating</a></li>
-                              <li><a href="images/handouts/session_4/group_data_record_tally.pdf">Group Data Record Tally</a></li>
-                              <li><a href="images/handouts/session_4/homework_handout_session_4.pdf">Session 4 Homework Handout</a></li>
-                              <li><a href="images/handouts/session_4/session_5_study_guide.pdf">Session 5 Study Guide</a></li>
+                              <li><a href="images/keys/4_key.pdf">Session 4 Answer Key</a></li>
                               <br>
                               </ol>
 
@@ -2437,12 +2383,9 @@
                               if ( today > dateLimit) { 
                             %>  
             
-                              <h4>Session 5 Materials <small> Available after <%= dateLimit %></small></h4>
+                              
                               <ol>
-                              <li><a href="images/handouts/session_5/goal_summary.pdf">CPRT Goal Summary</a></li>
-                              <li><a href="images/handouts/session_5/writing_and_targeting_iep_goals_handout.pdf">Writing and Targeting IEP Goals</a></li>
-                              <li><a href="images/handouts/session_5/homework_handout_session_5.pdf">Session 5 Homework Handout</a></li>
-                              <li><a href="images/handouts/session_5/session_6_study_guide.pdf">Session 6 Study Guide</a></li>
+                              <li><a href="images/keys/5_key.pdf">Session 5 Answer Key</a></li>
                               <br>
                               </ol>
 
@@ -2457,17 +2400,9 @@
                               if ( today > dateLimit) { 
                             %>  
             
-                              <h4>Session 6 Materials <small> Available after <%= dateLimit %></small></h4>
+                              
                               <ol>
-                              <li><a href="images/handouts/session_6/cprt_training_decision_tree.pdf">CPRT Training Decision Tree</a></li>
-                              <li><a href="images/handouts/session_6/student_attention.pdf">Student Attention</a></li>
-                              <li><a href="images/handouts/session_6/e_cprt_in_the_classroom.pdf">CPRT in the Classroom</a></li>
-                              <li><a href="images/handouts/session_6/e_cprt_in_the_home.pdf">CPRT in the Home</a></li>
-                              <li><a href="images/handouts/session_6/e_cprt_update_from_classroom_to_home.pdf">CPRT Update From the Classroom</a></li>
-                              <li><a href="images/handouts/session_6/feedback.pdf">CPRT Feedback</a></li>
-                              <li><a href="images/handouts/session_6/s_cprt_en_la_clase.pdf">CPRT en la Clase (CPRT in the Class)</a></li>
-                              <li><a href="images/handouts/session_6/s_cprt_en_el_hogar.pdf">CPRT en el Hogar (CPRT in the Home)</a></li>
-                              <li><a href="images/handouts/session_6/s_cprt_actualizacin_de_la_clase_al_hogar.pdf">CPRT Actualizacin de la clase al hogar(CPRT Update From the Classroom)</a></li>
+                              <li><a href="images/keys/6_key.pdf">Session 6 Answer Key</a></li>
                               <br>
                               </ol>
 
