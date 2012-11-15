@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Classroom Pivotal Response Teaching</title>
+    <link href="css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap-responsive.min.css" media="all" rel="stylesheet" type="text/css"/>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/underscore-1.1.6.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.0.18.min.js"></script>
+    <script src="js/users.js"></script>
+
+    <style type="text/css">
+
+      body
+      {
+        margin:20px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Todo App Interface -->
+    <div class="container">
+      
+        <div id="todoapp">
+          
+          <div class="title">
+            <h1>Classroom Pivotal Response Teaching</h1>
+            <p class="intro"> Classroom Pivotal Response Teaching – Helping teachers bridge the gap between research and practice. </p>
+
+          </div>
+
+          <div class="content"></div>
+
+        </div>
+      
+    </div>
+
+
+    <!-- Templates -->
+
+    <script type="text/template" id="login-template">
+
+    <div class="row-fluid">
+
+      <div class="span12">
+
+        <header id="header"></header>
+  
+        <div class="login">
+
+          <div class="login-form form-horizontal">
+
+            <legend>Create a new user</legend>
+            
+            <p>To edit users, use the Parse.com dashboard</p>
+            <br>
+            <div id="error" class="alert-error" style="display:none"></div>
+            <br>
+            <div class="control-group">
+
+              <label class="control-label" for="create-username">Username</label>
+              <div class="controls">
+                <input type="text" id="create-username" />
+              </div>
+            </div>
+
+            <div class="control-group">
+
+              <label class="control-label" for="create-fullname">Full name</label>
+              <div class="controls">
+                <input type="text" id="create-fullname" />
+              </div>
+            </div>
+
+
+            <div class="control-group">          
+              <label class="control-label" for="create-password">Password</label>
+              <div class="controls">
+                <input type="text" id="create-password" />
+              </div>
+            </div>
+
+
+            <div class="control-group">          
+              <label class="control-label" for="create-class">Class</label>
+              <div class="controls">
+                <select id="create-class">
+                  <option value="2013">2013</option>
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="control-group">          
+              <label class="control-label" for="create-location">Location</label>
+              <div class="controls">
+                <input type="text" id="create-location" />
+              </div>
+            </div>
+
+            <div class="control-group">          
+              <label class="control-label" for="create-schedule">Schedule</label>
+              <div class="controls">
+                <input type="text" id="create-schedule" />
+              </div>
+            </div>
+
+            <div class="control-group">          
+              <label class="control-label" for="create-trainer">Trainer</label>
+              <div class="controls">
+                <input type="text" id="create-trainer" />
+              </div>
+            </div>
+
+            <div class="control-group">          
+              <label class="control-label" for="create-traineremail">Trainer email</label>
+              <div class="controls">
+                <input type="text" id="create-traineremail" />
+              </div>
+            </div>
+
+            <div class="control-group">          
+              <label class="control-label" for="create-trainerx">Trainer X</label>
+              <div class="controls">
+                <input type="text" id="create-trainerx" />
+
+              </div>
+            </div>
+
+            <button class="btn btn-success pull-right" id="create-button">Create user</button>
+            </div>
+         </div>   
+
+      </div>
+  
+      <div class="span4">
+
+      <br>
+      <p><i>Last user created:</i></p>
+
+      <p><div id="lastcreated"></div></p>
+
+      </div>
+    </div>
+
+    </script>
+
+  </body>
+  
+</html>
