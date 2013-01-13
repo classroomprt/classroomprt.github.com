@@ -139,6 +139,7 @@ body {
   line-height: 20px;
   color: #333333;
   background-color: #ffffff;
+  background-image: url(images/bg.png);
 }
 a {
   color: #0088cc;
