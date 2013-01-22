@@ -1,4 +1,3 @@
-
 $(function() {
 
   Parse.$ = jQuery;
@@ -45,7 +44,7 @@ $(function() {
 
     importTest: function() {
 
-      console.log('uncomment this code to add users from parts.csv')
+     // console.log('uncomment this code to add users from parts.csv')
 
     // $.ajax({
     //   url: '/parts.csv',
