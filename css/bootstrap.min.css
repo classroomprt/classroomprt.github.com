@@ -137,8 +137,8 @@ em{font-style:italic;}
 cite{font-style:normal;}
 .muted{color:#999999;}
 h1,h2,h3,h4,h5,h6{margin:10px 0;font-family:inherit;font-weight:bold;line-height:1;color:inherit;text-rendering:optimizelegibility;}h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{font-weight:normal;line-height:1;color:#999999;}
-h1{font-size:36px;line-height:40px;}
-h2{font-size:30px;line-height:40px; color: #000099;}
+h1{font-size:36px;line-height:40px;color:#000066;}
+h2{font-size:30px;line-height:40px;color:#000099;}
 h3{font-size:24px;line-height:40px;}
 h4{font-size:18px;line-height:20px;}
 h5{font-size:14px;line-height:20px;}
